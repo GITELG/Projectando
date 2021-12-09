@@ -31,8 +31,607 @@
 						var nl = new Array(e.rl.length),
 							ix = 0,						
 							sl;					
-						
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script> <noscript><style>.wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head><body class="home page-template-default page page-id-359 no-js px-header-top  classic wpb-js-composer js-comp-ver-6.4.2 vc_responsive" ><div class="layout-container" id="layoutcontainer"><div class="color-overlay color-type"></div><div class="color-overlay texture-type"></div><div class="color-overlay image-type"></div><div class="texture-overlay"></div><div class="bg-image"></div><div class="layout"><div class="wrap right " style="" ><div class="business content visible-desktop hidden-tablet business-off" style="width:90%;"><div class=" clearfix"><div class="info-container"> <span class="item address"> <span class="icon icon-location"></span> <span class="address-content">Your address will show here</span> </span> <span class="item tel"> <a href="tel:+12 34 56 78" title="Call +12 34 56 78"> <span class="icon icon-phone"></span> <span class="tel-content">+12 34 56 78</span> </a> </span> <span class="item email"> <a href="mailto:email@example.com" title="Send an email to email@example.com"> <span class="icon icon-Mail"></span> <span class="email-content">email@example.com</span> </a> </span></div><div class="social icon"> <span data-social="linkedin"><a href="https://www.linkedin.com/company/dqr-tech" target="_blank"><span class="icon-linkedin"></span></a></span></div></div></div><header style="width: 90%; height:90px;max-height:90px;" class="top-classic header-style2 top header-dark logo-dark  custom-background" data-width="90"><div class="color-overlay"></div><div class="texture-overlay"></div><div class="bg-image"></div><div class="content top style-dot" style="width:100%;"> <a class="logo  item-left" style="width: 11.6%;" data-logoStyle="light"><img class="logo-img" data-home-url="https://www.dqrtech.com.br/" data-light-url="/wp-content/uploads/2020/11/logo-transparent.png" data-dark-url="/wp-content/uploads/2020/11/logo.png" src="https://www.dqrtech.com.br/wp-content/uploads/2020/11/logo-transparent.png"/></a><nav class='navigation hidden-tablet hidden-phone item-right' style='width: 88.4%;'><ul id="menu-main-menu" class="clearfix"><li id="menu_item-24" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Home</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu_item-350" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/#sobre-dqr-tech"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Sobre</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu_item-392" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/#metodologia-dqr-tech"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Método</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu_item-391" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/#servicos-dqr-tec"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Serviços</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu_item-3663" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.dqrtech.com.br/vagas/"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Vagas</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu_item-393" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/#contato"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Contato</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li></ul></nav><div class="pixflow-heder-icon-pack"> <a class="navigation-button hidden-desktop visible-tablet" href="#"> <span class="icon-gathermenu"></span> </a></div></div></header><nav class="navigation-mobile header-dark  custom-background"><ul id="menu-main-menu-1" class="menu"><li id="menu-item-mobile24" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Home</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu-item-mobile350" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/#sobre-dqr-tech"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Sobre</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu-item-mobile392" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/#metodologia-dqr-tech"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Método</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu-item-mobile391" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/#servicos-dqr-tec"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Serviços</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu-item-mobile3663" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.dqrtech.com.br/vagas/"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Vagas</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li><li id="menu-item-mobile393" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home"><a href="https://www.dqrtech.com.br/#contato"><span class="menu-separator-block"></span><span class='menu-title md-text-mode'><span class="title">Contato</span></span><span class="menu-separator"></span></a></li><li class="separator" >&nbsp;<a >&nbsp;</a></li></ul><div class="search-form"><form action="https://www.dqrtech.com.br/"><fieldset> <input type="text" name="s" placeholder="Search..." value=""> <input type="submit" value=""></fieldset></form></div></nav><main class="clearfix has-parallax-footer " style="padding-top:0px; width:100%;"><div id="content" class="content " style="padding: 0% ;" ><div class="color-overlay color-type"></div><div id="post-359" class="content-container post-359 page type-page status-publish hentry" ><div id="rowCustom-61b28329442fc" class="no-bg-image vc_row wpb_row mBuilder-element  controls-in   sectionOverlay vc_general vc_parallax vc_parallax- full_size "  data-mBuilder-id="1" data-col-layout="12/12" data-bgcolor=" rgba(255,255,255,1)" > <script>var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+$(document).ready(function(){
+if(typeof $ != 'function'){
+$ = jQuery;
+}
+var isChrome = window.chrome,
+$rowCustom_61b28329442fc = $("#rowCustom-61b28329442fc");
+$rowCustom_61b28329442fc.find('.row-image').remove();
+$rowCustom_61b28329442fc.append(
+'<div class="row-image row-image-normal "> </div>'
+);
+if (!("")) {
+$rowCustom_61b28329442fc.find('.row-image').remove();
+}
+if (typeof pixflow_fitRowToHeight == 'function') {
+pixflow_fitRowToHeight();
+}
+if (isChrome){
+$rowCustom_61b28329442fc.find(".row-image-fixed").append('<Style> .row-image-fixed:after{position:fixed; background-attachment:inherit;}</style>');
+}
+});
+})</script>  <script>var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+var $rowCustom_61b28329442fc = $('#rowCustom-61b28329442fc');
+if($rowCustom_61b28329442fc.find('.sloped-edge').length){
+$rowCustom_61b28329442fc.find('.sloped-edge').remove();
+}
+})</script> <div class="wrap clearfix"><div id="md_col-61b28329443cf" class='wpb_column vc_column_container    col-sm-12'><div class='vc_column-inner md_col-61b28329443cf'><div class='wpb_wrapper'><p class="rs-p-wp-fix"></p> <rs-module-wrap id="rev_slider_6_1_wrapper" data-source="gallery" style="background:#0f0f0f;padding:0;"> <rs-module id="rev_slider_6_1" style="" data-version="6.3.0"> <rs-slides> <rs-slide data-key="rs-16" data-title="Slide" data-thumb="/wp-content/uploads/2021/04/dqr-tech-banner1-1.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:fadetoleftfadefromright;sl:d;"> <img src="/wp-content/uploads/2021/04/dqr-tech-banner1-1.jpg" alt="dqr-tech-banner1-1" title="dqr-tech-banner1-1" width="1920" height="900" class="rev-slidebg" data-no-retina> <rs-layer
+ id="slider-6-slide-16-layer-2" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:49px;"
+ data-text="w:normal;s:60;l:82;fw:700;a:center;"
+ data-dim="w:973px;"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:1380;sp:1000;sR:1380;"
+ data-frame_999="e:nothing;st:w;sR:2620;"
+ style="z-index:11;font-family:Montserrat;"
+ >Outsourcing de Profissionais </rs-layer><rs-layer
+ id="slider-6-slide-16-layer-3" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:190px;"
+ data-text="w:normal;s:40;l:40;a:center;"
+ data-dim="w:855px;h:163px;"
+ data-vbility="f,f,f,t"
+ data-basealign="slide"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:1890;sp:1000;sR:1890;"
+ data-frame_999="e:nothing;st:w;sR:2110;"
+ style="z-index:9;font-family:Montserrat;"
+ >Encontramos os melhores profissionais do mercado para integrar suas equipes de TI </rs-layer><rs-layer
+ id="slider-6-slide-16-layer-4" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:160px;"
+ data-text="w:normal;s:25;l:27;a:center;"
+ data-dim="w:709px;h:74px;"
+ data-vbility="t,t,t,f"
+ data-basealign="slide"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:1890;sp:1000;sR:1890;"
+ data-frame_999="e:nothing;st:w;sR:2110;"
+ style="z-index:9;font-family:Montserrat;"
+ >Encontramos os melhores profissionais do mercado para integrar suas equipes de TI </rs-layer><rs-layer
+ id="slider-6-slide-16-layer-6" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:-38px;"
+ data-text="w:normal;s:50;l:82;fw:200;a:center;"
+ data-dim="w:639px;"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:890;sp:1000;sR:890;"
+ data-frame_999="e:nothing;st:w;sR:3110;"
+ style="z-index:12;font-family:Montserrat;"
+ >Serviços RPO Hunting </rs-layer><rs-layer
+ id="slider-6-slide-16-layer-7" 
+ data-type="shape"
+ data-rsp_ch="on"
+ data-text="w:normal;"
+ data-dim="w:100%;h:100%;"
+ data-basealign="slide"
+ data-frame_999="o:0;st:w;sR:4700;"
+ style="z-index:8;background-color:rgba(0,0,0,0.6);"
+ > </rs-layer> </rs-slide> <rs-slide data-key="rs-17" data-title="Slide" data-thumb="/wp-content/uploads/2021/04/dqr-tech-banner1-2.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:fadetoleftfadefromright;sl:d;"> <img src="/wp-content/uploads/2021/04/dqr-tech-banner1-2.jpg" alt="dqr-tech-banner1-2" title="dqr-tech-banner1-2" width="1920" height="900" class="rev-slidebg" data-no-retina> <rs-layer
+ id="slider-6-slide-17-layer-2" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:-75px;"
+ data-text="w:normal;s:50;l:82;fw:200;a:center;"
+ data-dim="w:430.7560975609756px;h:95px;"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:830;sp:1000;sR:830;"
+ data-frame_999="e:nothing;st:w;sR:3170;"
+ style="z-index:12;font-family:Montserrat;"
+ > Parceria </rs-layer><rs-layer
+ id="slider-6-slide-17-layer-4" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:135px;"
+ data-text="s:25;l:22;a:center;"
+ data-dim="w:455px;"
+ data-vbility="t,t,t,f"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:2070;sp:1000;sR:2070;"
+ data-frame_999="e:nothing;st:w;sR:1930;"
+ style="z-index:9;font-family:Montserrat;"
+ >Esses são os nossos diferenciais </rs-layer><rs-layer
+ id="slider-6-slide-17-layer-5" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:75px;"
+ data-text="w:normal;s:50;l:82;fw:200;a:center;"
+ data-dim="w:576.1463414634146px;"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:1750;sp:1000;sR:1750;"
+ data-frame_999="e:nothing;st:w;sR:2250;"
+ style="z-index:10;font-family:Montserrat;"
+ >Eficiência </rs-layer><rs-layer
+ id="slider-6-slide-17-layer-6" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;"
+ data-text="w:normal;s:70;l:82;fw:700;a:center;"
+ data-dim="w:508px;"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:1360;sp:1000;sR:1360;"
+ data-frame_999="e:nothing;st:w;sR:2640;"
+ style="z-index:11;font-family:Montserrat;"
+ >Proximidade </rs-layer><rs-layer
+ id="slider-6-slide-17-layer-7" 
+ data-type="shape"
+ data-rsp_ch="on"
+ data-text="w:normal;"
+ data-dim="w:100%;h:100%;"
+ data-basealign="slide"
+ data-frame_999="o:0;st:w;sR:4700;"
+ style="z-index:8;background-color:rgba(0,0,0,0.6);"
+ > </rs-layer> </rs-slide> <rs-slide data-key="rs-18" data-title="Slide" data-thumb="/wp-content/uploads/2021/04/dqr-tech-banner1-3.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:fadetoleftfadefromright;sl:d;"> <img src="/wp-content/uploads/2021/04/dqr-tech-banner1-3.jpg" alt="dqr-tech-banner1-3" title="dqr-tech-banner1-3" width="1920" height="900" class="rev-slidebg" data-no-retina> <rs-layer
+ id="slider-6-slide-18-layer-2" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:-75px;"
+ data-text="w:normal;s:50;l:82;fw:200;a:center;"
+ data-dim="w:430.7560975609756px;h:95px;"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:500;sp:1000;sR:500;"
+ data-frame_999="e:nothing;st:w;sR:3500;"
+ style="z-index:12;font-family:Montserrat;"
+ >Time motivado </rs-layer><rs-layer
+ id="slider-6-slide-18-layer-4" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:135px;"
+ data-text="s:22;l:22;a:center;"
+ data-dim="w:455px;"
+ data-vbility="t,t,t,f"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:1740;sp:1000;sR:1740;"
+ data-frame_999="e:nothing;st:w;sR:2260;"
+ style="z-index:9;font-family:Montserrat;"
+ >É o nosso perfil </rs-layer><rs-layer
+ id="slider-6-slide-18-layer-5" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;yo:75px;"
+ data-text="w:normal;s:50;l:82;fw:200;a:center;"
+ data-dim="w:576.1463414634146px;"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:1400;sp:1000;sR:1400;"
+ data-frame_999="e:nothing;st:w;sR:2600;"
+ style="z-index:10;font-family:Montserrat;"
+ >Que evolui sempre </rs-layer><rs-layer
+ id="slider-6-slide-18-layer-6" 
+ data-type="text"
+ data-color="rgba(255,255,255,1)"
+ data-rsp_ch="on"
+ data-xy="x:c;y:c;"
+ data-text="w:normal;s:70;l:82;fw:700;a:center;"
+ data-dim="w:508px;"
+ data-frame_0="sX:0.9;sY:0.9;"
+ data-frame_1="e:power2.inOut;st:990;sp:1000;sR:990;"
+ data-frame_999="e:nothing;st:w;sR:3010;"
+ style="z-index:11;font-family:Montserrat;"
+ >Competente </rs-layer><rs-layer
+ id="slider-6-slide-18-layer-7" 
+ data-type="shape"
+ data-rsp_ch="on"
+ data-text="w:normal;"
+ data-dim="w:100%;h:100%;"
+ data-basealign="slide"
+ data-frame_999="o:0;st:w;sR:4700;"
+ style="z-index:8;background-color:rgba(0,0,0,0.6);"
+ > </rs-layer> </rs-slide> </rs-slides> </rs-module> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){try{
+setREVStartSize({c: 'rev_slider_6_1',rl:[1240,1024,778,480],el:[868],gw:[1240],gh:[868],type:'standard',justify:'',layout:'fullscreen',offsetContainer:'',offset:'',mh:"0"});
+var revapi6,
+tpj;
+function revinit_revslider61() {
+jQuery(function() {
+tpj = jQuery;
+revapi6 = tpj("#rev_slider_6_1");
+if(revapi6==undefined || revapi6.revolution == undefined){
+revslider_showDoubleJqueryError("rev_slider_6_1");
+}else{
+revapi6.revolution({
+sliderLayout:"fullscreen",
+duration:5000,
+visibilityLevels:"1240,1024,778,480",
+gridwidth:1240,
+gridheight:868,
+perspective:600,
+perspectiveType:"local",
+editorheight:"868,768,960,720",
+responsiveLevels:"1240,1024,778,480",
+progressBar:{disableProgressBar:true},
+navigation: {
+mouseScrollNavigation:false,
+wheelCallDelay:1000,
+onHoverStop:false,
+touch: {
+touchenabled:true
+},
+arrows: {
+enable:true,
+style:"uranus",
+left: {
+},
+right: {
+}
+}
+},
+fallbacks: {
+allowHTML5AutoPlayOnAndroid:true
+},
+});
+}
+});
+} // End of RevInitScript
+var once_revslider61 = false;
+if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider61 ) { once_revslider61 = true; revinit_revslider61();}});} else {once_revslider61 = true; revinit_revslider61();}
+}catch(e){}})})})</script> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+var htmlDivCss = unescape("%23rev_slider_6_1_wrapper%20.uranus.tparrows%20%7B%0A%20%20width%3A50px%3B%0A%20%20height%3A50px%3B%0A%20%20background%3Argba%28255%2C255%2C255%2C0%29%3B%0A%20%7D%0A%20%23rev_slider_6_1_wrapper%20.uranus.tparrows%3Abefore%20%7B%0A%20width%3A50px%3B%0A%20height%3A50px%3B%0A%20line-height%3A50px%3B%0A%20font-size%3A40px%3B%0A%20transition%3Aall%200.3s%3B%0A-webkit-transition%3Aall%200.3s%3B%0A%20%7D%0A%20%0A%20%20%23rev_slider_6_1_wrapper%20.uranus.tparrows%3Ahover%3Abefore%20%7B%0A%20%20%20%20opacity%3A0.75%3B%0A%20%20%7D%0A");
+var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+if(htmlDiv) {
+htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+}else{
+var htmlDiv = document.createElement('div');
+htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+}
+})})})</script> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+var htmlDivCss = unescape("%0A%0A%0A");
+var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+if(htmlDiv) {
+htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+}else{
+var htmlDiv = document.createElement('div');
+htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+}
+})})})</script> </rs-module-wrap></div></div></div> <script>var $=jQuery;$(document).ready(function(){
+var $ = jQuery;
+var $rowCustom_61b28329442fc = $('#rowCustom-61b28329442fc');
+if ( "1" )
+{
+$rowCustom_61b28329442fc.find('> .wrap').addClass('box_size_container');
+$rowCustom_61b28329442fc.find('> .wrap').addClass('box_size_container');
+}
+else
+{
+$rowCustom_61b28329442fc.find('> .wrap').removeClass('box_size_container');
+$rowCustom_61b28329442fc.find('> .wrap').removeClass('box_size_container');
+}
 
+$('#rowCustom-61b28329442fc').find('.row-videobg').not('.row-videobg[data-row-id="rowCustom-61b28329442fc"]').remove();
+})</script> </div></div><div id="rowCustom-61b283294f4cd" class="no-bg-image vc_row wpb_row mBuilder-element  controls-in   sectionOverlay vc_general vc_parallax vc_parallax- full_size "  data-mBuilder-id="2" data-col-layout="12/12" data-bgcolor=" rgb(255, 255, 255)" > <script>var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+$(document).ready(function(){
+if(typeof $ != 'function'){
+$ = jQuery;
+}
+var isChrome = window.chrome,
+$rowCustom_61b283294f4cd = $("#rowCustom-61b283294f4cd");
+$rowCustom_61b283294f4cd.find('.row-image').remove();
+$rowCustom_61b283294f4cd.append(
+'<div class="row-image row-image-normal "> </div>'
+);
+if (!("")) {
+$rowCustom_61b283294f4cd.find('.row-image').remove();
+}
+if (typeof pixflow_fitRowToHeight == 'function') {
+pixflow_fitRowToHeight();
+}
+if (isChrome){
+$rowCustom_61b283294f4cd.find(".row-image-fixed").append('<Style> .row-image-fixed:after{position:fixed; background-attachment:inherit;}</style>');
+}
+});
+})</script>  <script>var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+var $rowCustom_61b283294f4cd = $('#rowCustom-61b283294f4cd');
+if($rowCustom_61b283294f4cd.find('.sloped-edge').length){
+$rowCustom_61b283294f4cd.find('.sloped-edge').remove();
+}
+})</script> <div class="wrap clearfix"><div id="md_col-61b283294f5d1" class='wpb_column vc_column_container  vc_col-has-fill  col-sm-6'><div class='vc_column-inner md_col-61b283294f5d1'><div class='wpb_wrapper'><div class="text-in-box textbox-61b283294f693 has-animation" data-animation-speed=800 data-animation-delay=0.4 data-animation-position=bottom data-animation-show=once data-animation-easing=Power4.easeOut><div class="icon-holder"><div class="icon icon-laptop2"></div></div><div class=" clearfix"></div><h5 class="title"> RPO<br />Hunting</h5><p class="description">Necessidade de achar o proﬁssional certo? Nós contamos com a expertise e tecnologia para ajudar.</p><div class=" clearfix"></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})</script> </div></div></div><div id="md_col-61b283294f754" class='wpb_column vc_column_container  vc_col-has-fill  col-sm-6'><div class='vc_column-inner md_col-61b283294f754'><div class='wpb_wrapper'><div class="text-in-box textbox-61b283294f7a6 has-animation" data-animation-speed=800 data-animation-delay=0.5 data-animation-position=bottom data-animation-show=once data-animation-easing=Power4.easeOut><div class="icon-holder"><div class="icon icon-world"></div></div><div class=" clearfix"></div><h5 class="title"> Outsourcing de<br />Profissionais</h5><p class="description">Encontramos os melhores profissionais do mercado para integrar as equipes de TI da sua empresa.</p><div class=" clearfix"></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})</script> </div></div></div> <script>var $=jQuery;$(document).ready(function(){
+var $ = jQuery;
+var $rowCustom_61b283294f4cd = $('#rowCustom-61b283294f4cd');
+if ( "" )
+{
+$rowCustom_61b283294f4cd.find('> .wrap').addClass('box_size_container');
+$rowCustom_61b283294f4cd.find('> .wrap').addClass('box_size_container');
+}
+else
+{
+$rowCustom_61b283294f4cd.find('> .wrap').removeClass('box_size_container');
+$rowCustom_61b283294f4cd.find('> .wrap').removeClass('box_size_container');
+}
+
+$('#rowCustom-61b283294f4cd').find('.row-videobg').not('.row-videobg[data-row-id="rowCustom-61b283294f4cd"]').remove();
+})</script> </div></div><div id="rowCustom-61b283294f947" class="no-bg-image vc_row wpb_row mBuilder-element  controls-in   sectionOverlay vc_general vc_parallax vc_parallax- full_size "  data-mBuilder-id="3" data-col-layout="12/12" data-bgcolor=" rgba(255,255,255,1)" ><div id="sobre-dqr-tech" class="one-page-anchor"></div> <script>var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+$(document).ready(function(){
+if(typeof $ != 'function'){
+$ = jQuery;
+}
+var isChrome = window.chrome,
+$rowCustom_61b283294f947 = $("#rowCustom-61b283294f947");
+$rowCustom_61b283294f947.find('.row-image').remove();
+$rowCustom_61b283294f947.append(
+'<div class="row-image row-image-normal "> </div>'
+);
+if (!("")) {
+$rowCustom_61b283294f947.find('.row-image').remove();
+}
+if (typeof pixflow_fitRowToHeight == 'function') {
+pixflow_fitRowToHeight();
+}
+if (isChrome){
+$rowCustom_61b283294f947.find(".row-image-fixed").append('<Style> .row-image-fixed:after{position:fixed; background-attachment:inherit;}</style>');
+}
+});
+})</script>  <script>var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+var $rowCustom_61b283294f947 = $('#rowCustom-61b283294f947');
+if($rowCustom_61b283294f947.find('.sloped-edge').length){
+$rowCustom_61b283294f947.find('.sloped-edge').remove();
+}
+})</script> <div class="wrap clearfix"><div id="md_col-61b283294fa2d" class='wpb_column vc_column_container  vc_col-has-fill full-width col-sm-6'><div class='vc_column-inner md_col-61b283294fa2d'><div class='wpb_wrapper'><div class=' vc_empty_space gizmo-container small-gizmo no-setting-gizmo no-animation-gizmo clearfix empty_space_61b283294fab9' style='height:100px'></div><div class="md-text-alignment-left md-text-alignment-mobile-portrait-center md-text-alignment-mobile-landscape-center md-text-alignment-tablet-portrait-center md-text-alignment-tablet-landscape-center md-text-container md_text_style-61b283294fb6c has-animation md-align-left wpb_wrapper wpb_md_text_wrapper ui-md_text" data-animation-speed=600 data-animation-delay=0.1 data-animation-position=left data-animation-show=once data-animation-easing=Quart.easeInOut><div class="md-text gizmo-container"><div class="md-text-title inline-editor-title "><div><span style="font-size: 15px;">Sobre</span></div></div><div class="md-text-content inline-editor " ><p></p><p></p></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if(typeof pixflow_title_slider == 'function'){
+pixflow_title_slider();
+}
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})</script> <div class="md-text-alignment-left md-text-alignment-mobile-portrait-center md-text-alignment-mobile-landscape-center md-text-alignment-tablet-portrait-center md-text-alignment-tablet-landscape-center md-text-container md_text_style-61b283294fc8b has-animation md-align-left wpb_wrapper wpb_md_text_wrapper ui-md_text" data-animation-speed=600 data-animation-delay=0.2 data-animation-position=left data-animation-show=once data-animation-easing=Quart.easeInOut><div class="md-text gizmo-container"><div class="md-text-title inline-editor-title "><div><span style="font-size: 38px;">Um pouco da <span style="color: #f4b870;">DQR Tech</span></span></div></div><div class="md-text-content inline-editor " ><p></p><p style="text-align: justify;">Nascemos de uma parceria de mais de 10 anos entre seus sócios, somando a paixão por tecnologia à vontade de construir uma empresa diferente, investindo na proximidade com nossos parceiros e clientes. Somos uma consultoria especializada em Arquitetura de TI, Outsourcing de Profissionais e Hunting, trabalhando com foco em redução de custos, ganho de velocidade e qualidade. Nosso diferencial está em, inicialmente, entender seus projetos, desafios e tecnologias, e direcionando apenas os profissionais com o melhor perfil para seus desafios, otimizando assim todo o tempo gasto com hunting e entrevistas técnicas de triagem. Ao final do processo você decide o que é melhor para sua empresa, contratar este profissional ou terceirizar com a gente!</p><p></p></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if(typeof pixflow_title_slider == 'function'){
+pixflow_title_slider();
+}
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})</script> <div class="md-icon icon-61b283294fd3f  md-align-center  px-tablet-landscape-align-center px-tablet-portrait-align-center px-mobile-landscape-align-center px-mobile-portrait-align-center" ><div class="px-svg-container"><svg id="noun_Puzzle_Piece_1839812" data-name="noun_Puzzle Piece_1839812" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 61"> <defs> </defs> <path id="Shape" class="cls-1" d="M45.08,61H28.172a.924.924,0,0,1-.728-1.489,10.164,10.164,0,0,0,2-5.906,6.44,6.44,0,1,0-12.88,0,10.164,10.164,0,0,0,2,5.906A.924.924,0,0,1,17.828,61H.932a.923.923,0,0,1-.92-.924L.007,41.247a.927.927,0,0,1,.924-.926.9.9,0,0,1,.557.194,10.059,10.059,0,0,0,5.872,2,6.47,6.47,0,0,0,0-12.939,10.059,10.059,0,0,0-5.874,2,.9.9,0,0,1-.557.194.94.94,0,0,1-.641-.257A.912.912,0,0,1,0,30.847L0,15.712a.923.923,0,0,1,.92-.924h16.7a11.977,11.977,0,0,1-1.976-6.47,8.28,8.28,0,1,1,16.56,0,11.97,11.97,0,0,1-1.977,6.47H45.08a.923.923,0,0,1,.92.924V30.849a.927.927,0,0,1-.923.926.9.9,0,0,1-.558-.194,10.061,10.061,0,0,0-5.879-2.005,6.47,6.47,0,0,0,0,12.939,10.061,10.061,0,0,0,5.879-2.005.9.9,0,0,1,.558-.194.927.927,0,0,1,.923.926V60.076A.923.923,0,0,1,45.08,61ZM23,45.288a8.308,8.308,0,0,1,8.28,8.318,12,12,0,0,1-1.424,5.546h14.3V42.934a11.858,11.858,0,0,1-5.521,1.43,8.318,8.318,0,0,1,0-16.636,11.857,11.857,0,0,1,5.521,1.43V16.637H28.271a.925.925,0,0,1-.638-1.589A9.771,9.771,0,0,0,30.36,8.318a6.44,6.44,0,1,0-12.88,0,9.768,9.768,0,0,0,2.728,6.729.925.925,0,0,1-.639,1.589H1.841l0,12.519A11.847,11.847,0,0,1,7.36,27.727a8.318,8.318,0,0,1,0,16.636,11.848,11.848,0,0,1-5.513-1.426l0,16.214H16.144a11.989,11.989,0,0,1-1.424-5.546A8.308,8.308,0,0,1,23,45.288Z"/> </svg></div><div class="clearfix"></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = (jQuery);
+$(document).ready(function(){
+if(typeof pixflow_iconShortcode == 'function'){
+pixflow_iconShortcode('icon-61b283294fd3f');
+}
+});
+})})})</script> </div></div></div><div id="md_col-61b28329c8961" class='wpb_column vc_column_container  vc_col-has-fill full-width col-sm-6'><div class='vc_column-inner md_col-61b28329c8961'><div class='wpb_wrapper'><div id="imageBoxSlider-61b28329c8b0d" data-speed="3000" data-effect="fade" class="img-box-slider has-animation md-align-center" data-animation-speed=600 data-animation-delay=0.3 data-animation-position=right data-animation-show=once data-animation-easing=Quart.easeInOut><ul class="slides"><li><div class="imgBox-image imgBox-image-main image-imageBoxSlider-61b28329c8b0d0 contain" data-height="508" data-width="600" role="img" aria-label="dqr-home-qualidade"></div> <a href="" target="_self" class="imgBox-image imgBox-image-hover image-hover-imageBoxSlider-61b28329c8b0d0"></a> <a target="_self" href="" class="image-box-slider-hover-text light"> Text Hover </a> <style>.imgBox-image.image-imageBoxSlider-61b28329c8b0d0{background-image:url("https://www.dqrtech.com.br/wp-content/uploads/2021/04/dqr-home-qualidade.png");}#imageBoxSlider-61b28329c8b0d .imgBox-image, #imageBoxSlider-61b28329c8b0d .image-box-slider-hover-text{pointer-events:none; cursor:default;}#imageBoxSlider-61b28329c8b0d .imgBox-image.image-imageBoxSlider-61b28329c8b0d0{background-size:contain;}</style></li></ul></div>  <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+$(document).ready(function() {
+if (typeof pixflow_imageBoxSlider == 'function') {
+pixflow_imageBoxSlider("imageBoxSlider-61b28329c8b0d", "750");
+}
+});
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})</script> </div></div></div> <script>var $=jQuery;$(document).ready(function(){
+var $ = jQuery;
+var $rowCustom_61b283294f947 = $('#rowCustom-61b283294f947');
+if ( "1" )
+{
+$rowCustom_61b283294f947.find('> .wrap').addClass('box_size_container');
+$rowCustom_61b283294f947.find('> .wrap').addClass('box_size_container');
+}
+else
+{
+$rowCustom_61b283294f947.find('> .wrap').removeClass('box_size_container');
+$rowCustom_61b283294f947.find('> .wrap').removeClass('box_size_container');
+}
+
+$('#rowCustom-61b283294f947').find('.row-videobg').not('.row-videobg[data-row-id="rowCustom-61b283294f947"]').remove();
+})</script> </div></div><div id="rowCustom-61b28329c9589" class="no-bg-image vc_row wpb_row mBuilder-element vc_row wpb_row mBuilder-element    sectionOverlay vc_general vc_parallax vc_parallax- full_size "  data-mBuilder-id="4" data-col-layout="12/12" data-bgcolor=" rgb(38, 49, 60)" ><div id="metodologia-dqr-tech" class="one-page-anchor"></div> <script>var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+$(document).ready(function(){
+if(typeof $ != 'function'){
+$ = jQuery;
+}
+var isChrome = window.chrome,
+$rowCustom_61b28329c9589 = $("#rowCustom-61b28329c9589");
+$rowCustom_61b28329c9589.find('.row-image').remove();
+$rowCustom_61b28329c9589.append(
+'<div class="row-image row-image-normal "> </div>'
+);
+if (!("")) {
+$rowCustom_61b28329c9589.find('.row-image').remove();
+}
+if (typeof pixflow_fitRowToHeight == 'function') {
+pixflow_fitRowToHeight();
+}
+if (isChrome){
+$rowCustom_61b28329c9589.find(".row-image-fixed").append('<Style> .row-image-fixed:after{position:fixed; background-attachment:inherit;}</style>');
+}
+});
+})</script>  <script>var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+var $rowCustom_61b28329c9589 = $('#rowCustom-61b28329c9589');
+if($rowCustom_61b28329c9589.find('.sloped-edge').length){
+$rowCustom_61b28329c9589.find('.sloped-edge').remove();
+}
+})</script> <div class="wrap clearfix"><div id="md_col-61b28329c97b6" class='wpb_column vc_column_container    col-sm-12'><div class='vc_column-inner md_col-61b28329c97b6'><div class='wpb_wrapper'><div id="md-live-text-61b28329c9983" class="md-live-text  gizmo-container  61b28329c9983 has-animation md-align-center    " data-animation-speed=800 data-animation-delay=0.5 data-animation-position=right data-animation-show=once data-animation-easing=Power4.easeOut><div class="live-text-container"><div class="meditor meditor-responsive  inline-md-editor meditor-responsive" style="line-height:1.5em;letter-spacing:0.00px" data-letterspace="0.00" data-lineheight="1.5"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><h4 style="text-align: center; line-height: 1.5em; font-size: 34px; color: rgb(255, 255, 255);"><b style="color: rgb(255, 255, 255);" class="">A nossa metodologia</b></h4></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})</script> <div id="rowInnerCustom-61b28329c9a0e" class="vc_row wpb_row vc_inner    sectionOverlay vc_general vc_parallax full_size " > <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+"use strict";
+var $ = jQuery;
+$(document).ready(function() {
+if(typeof $ != 'function'){
+$ = jQuery;
+}
+var $rowInnerCustom_61b28329c9a0e = $("#rowInnerCustom-61b28329c9a0e");
+$rowInnerCustom_61b28329c9a0e.find('.row-image').remove();
+$rowInnerCustom_61b28329c9a0e.append('<div class="row-image" ></div>');
+});
+})})})</script> <div class="wrap clearfix"><div id="md_col-61b28329c9b6f" class='wpb_column vc_column_container  vc_col-has-fill  col-sm-4'><div class='vc_column-inner md_col-61b28329c9b6f'><div class='wpb_wrapper'><div class="md-icon icon-61b28329c9c97 has-animation md-align-center  px-tablet-landscape-align-center px-tablet-portrait-align-center px-mobile-landscape-align-center px-mobile-portrait-align-center" data-animation-speed=800 data-animation-delay=0.0 data-animation-position=left data-animation-show=once data-animation-easing=Power4.easeOut> <span class="icon icon-search2"></span></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> <div id="md-live-text-61b28329c9dcf" class="md-live-text  gizmo-container  61b28329c9dcf has-animation md-align-center    " data-animation-speed=800 data-animation-delay=0 data-animation-position=bottom data-animation-show=once data-animation-easing=Quart.easeInOut><div class="live-text-container"><div class="meditor meditor-responsive  inline-md-editor meditor-responsive" style="line-height:1em;letter-spacing:0px" data-letterspace="0" data-lineheight="1"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><h5 style="line-height: 1.7em;"><span style="line-height: 1.7em;" class="keep-text-selected"><span style="line-height: 1.7em;" class="keep-text-selected"><span style="font-size: 22px; color: rgb(0, 0, 0); line-height: 1.7em;"><span data-font-weight="300" style="font-style: normal; color: rgb(0, 0, 0); line-height: 1.7em;" ;font-family:="" roboto;="" font-weight:="" 300'="" class=""><span style="color: rgb(255, 255, 255); line-height: 1.7em;" class=""><span data-font-weight="300" style="font-style: normal; line-height: 1.7em;" ;font-family:="" roboto;="" font-weight:="" 300'=""><span data-font-weight="300" style="font-style: normal; line-height: 1.7em;" ;font-family:="" roboto;="" font-weight:="" 300'=""><span data-font-weight="300" style="font-style: normal; line-height: 1.7em;" ;font-family:="" roboto;="" font-weight:="" 300'=""><span data-font-weight="300" style="font-style: normal; line-height: 1.7em;" ;font-family:="" roboto;="" font-weight:="" 300'="" class=""><span data-font-weight="undefined" style="font-style: normal; font-family: Montserrat;"><b>Step 1</b></span></span></span></span></span></span></span></span></span></span></h5></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> <div id="md-live-text-61b28329c9e41" class="md-live-text  gizmo-container  61b28329c9e41 has-animation md-align-center    " data-animation-speed=800 data-animation-delay=0.0 data-animation-position=left data-animation-show=once data-animation-easing=Quart.easeInOut><div class="live-text-container"><div class="meditor meditor-responsive  inline-md-editor meditor-responsive" style="line-height:1em;letter-spacing:0px" data-letterspace="0" data-lineheight="1"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div style="text-align: center; color: rgb(255, 255, 255);"><span color="#ffffff" style="font-family: Montserrat; color: rgb(255, 255, 255); line-height: 1.5em;" class="">Entendemos o perfil necessário <b style="font-family: Montserrat; font-style: normal; color: rgb(255, 255, 255);">(Técnico e Comportamental)</b> com a área demandante.</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> </div></div></div><div id="md_col-61b28329c9f93" class='wpb_column vc_column_container  vc_col-has-fill  col-sm-4'><div class='vc_column-inner md_col-61b28329c9f93'><div class='wpb_wrapper'><div class="md-icon icon-61b28329ca033 has-animation md-align-center  px-tablet-landscape-align-center px-tablet-portrait-align-center px-mobile-landscape-align-center px-mobile-portrait-align-center" data-animation-speed=800 data-animation-delay=0.5 data-animation-position=bottom data-animation-show=once data-animation-easing=Power4.easeOut> <span class="icon icon-bubble"></span></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> <div id="md-live-text-61b28329ca0fc" class="md-live-text  gizmo-container  61b28329ca0fc has-animation md-align-center    " data-animation-speed=800 data-animation-delay=0.3 data-animation-position=bottom data-animation-show=once data-animation-easing=Quart.easeInOut><div class="live-text-container"><div class="meditor meditor-responsive  inline-md-editor meditor-responsive" style="line-height:1em;letter-spacing:0px" data-letterspace="0" data-lineheight="1"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><h5 style="line-height: 1.8em; color: rgb(255, 255, 255);"><span color="#ffffff" style="color: rgb(255, 255, 255);"><span style="font-size: 22px; color: rgb(255, 255, 255);" class=""><span data-font-weight="undefined" style="font-style: normal; font-family: Montserrat; color: rgb(255, 255, 255);" class=""><b style="color: rgb(255, 255, 255);">Step 2</b></span></span></span></h5></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> <div id="md-live-text-61b28329ca17a" class="md-live-text  gizmo-container  61b28329ca17a has-animation md-align-center    " data-animation-speed=800 data-animation-delay=0.3 data-animation-position=bottom data-animation-show=once data-animation-easing=Quart.easeInOut><div class="live-text-container"><div class="meditor meditor-responsive  inline-md-editor meditor-responsive" style="line-height:1.5em;letter-spacing:0px" data-letterspace="0" data-lineheight="1.5"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div style="text-align: center; color: rgb(255, 255, 255);"><span color="#ffffff" style="font-family: Montserrat; color: rgb(255, 255, 255); line-height: 1.5em;" class=""><span data-font-weight="undefined" style="font-style: normal; font-family: Montserrat; color: rgb(255, 255, 255); line-height: 1.5em;" class="">Fazemos o <b style="color: rgb(255, 255, 255);">Hunting </b>dos Profissionais no <b style="color: rgb(255, 255, 255);">mercado</b>.</span></span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> </div></div></div><div id="md_col-61b28329ca2a5" class='wpb_column vc_column_container  vc_col-has-fill  col-sm-4'><div class='vc_column-inner md_col-61b28329ca2a5'><div class='wpb_wrapper'><div class="md-icon icon-61b28329ca353 has-animation md-align-center  px-tablet-landscape-align-center px-tablet-portrait-align-center px-mobile-landscape-align-center px-mobile-portrait-align-center" data-animation-speed=800 data-animation-delay=0.3 data-animation-position=bottom data-animation-show=once data-animation-easing=Power4.easeOut> <span class="icon icon-eye"></span></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> <div id="md-live-text-61b28329ca416" class="md-live-text  gizmo-container  61b28329ca416 has-animation md-align-center    " data-animation-speed=800 data-animation-delay=0.2 data-animation-position=bottom data-animation-show=once data-animation-easing=Quart.easeInOut><div class="live-text-container"><div class="meditor meditor-responsive  inline-md-editor meditor-responsive" style="line-height:1em;letter-spacing:0px" data-letterspace="0" data-lineheight="1"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><h5 style="line-height: 1.8em; color: rgb(255, 255, 255);"><span color="#ffffff" style="color: rgb(255, 255, 255);"><span style="font-size: 22px; color: rgb(255, 255, 255);" class=""><span data-font-weight="undefined" style="font-style: normal; font-family: Montserrat; color: rgb(255, 255, 255);" class=""><b style="color: rgb(255, 255, 255);">Step 3</b></span></span></span></h5></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> <div id="md-live-text-61b28329ca47f" class="md-live-text  gizmo-container  61b28329ca47f has-animation md-align-center    " data-animation-speed=800 data-animation-delay=0.3 data-animation-position=bottom data-animation-show=once data-animation-easing=Quart.easeInOut><div class="live-text-container"><div class="meditor meditor-responsive  inline-md-editor meditor-responsive" style="line-height:1.5em;letter-spacing:0px" data-letterspace="0" data-lineheight="1.5"><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div style="text-align: center; color: rgb(255, 255, 255);"><span color="#ffffff" style="font-family: Montserrat; color: rgb(255, 255, 255);" class=""><span data-font-weight="undefined" style="font-style: normal; font-family: Montserrat; color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 255);" class="">Realizamos uma <b style="color: rgb(255, 255, 255);">entrevista (triagem) técnica</b>.</span></span></span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( document.readyState === 'complete' ){
+if(typeof pixflow_shortcodeAnimation == 'function'){
+pixflow_shortcodeAnimation();
+}
+if(typeof pixflow_shortcodeAnimationScroll == 'function'){
+pixflow_shortcodeAnimationScroll();
+}
+}
+})})})})})</script> </div></div></div> <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
+if ( "" )
+{
+$('#rowInnerCustom-61b28329c9a0e').find('.wrap').addClass('box_size_container');
+$('#rowInnerCustom-61b28329c9a0e').find('.wrap').addClass('box_size_container');
+}
+else
+{
+$('#rowInnerCustom-61b28329c9a0e').find('.wrap').removeClass('box_size_container');
+$('#rowInnerCustom-61b28329c9a0e').find('.wrap').removeClass('box_size_container');
 }
 })})})</script> </div></div><div id="rowInnerCustom-61b28329ca6c0" class="vc_row wpb_row vc_inner    sectionOverlay vc_general vc_parallax full_size " > <script>var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){var $=jQuery;$(document).ready(function(){
 "use strict";
